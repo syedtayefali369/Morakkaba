@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morakkaba | Immersive Meditation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-spa"></i>
+                    <span>Morakkaba</span>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#meditate">Meditate</a></li>
+                    <li><a href="#sounds">Ambience</a></li>
+                    <li><a href="#donate">Support</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <button class="cta-button" id="startMeditationBtn">
+                    <i class="fas fa-play-circle"></i>
+                    Start Session
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="fade-in">
+                <h1>Find Your Inner Peace with Morakkaba</h1>
+                <p>Immerse yourself in guided meditations, ambient sounds, and mindfulness practices designed to reduce stress, improve focus, and enhance overall wellbeing.</p>
+                <div class="hero-buttons">
+                    <button class="cta-button pulse" id="heroStartBtn">
+                        <i class="fas fa-play"></i>
+                        Begin Meditation
+                    </button>
+                    <button class="secondary-button" id="learnMoreBtn">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meditation Timer -->
+    <section class="meditation-timer" id="meditate">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meditation Timer</h2>
+                <p>Set your meditation duration and immerse yourself in mindfulness. Choose from preset times or set your own custom duration.</p>
+            </div>
+            <div class="timer-container fade-in">
+                <div class="time-display" id="timeDisplay">10:00</div>
+                <div class="timer-controls">
+                    <button class="timer-btn active" data-time="300">5 Min</button>
+                    <button class="timer-btn" data-time="600">10 Min</button>
+                    <button class="timer-btn" data-time="900">15 Min</button>
+                    <button class="timer-btn" data-time="1800">30 Min</button>
+                    <button class="timer-btn" data-time="2700">45 Min</button>
+                </div>
+                <div class="timer-actions">
+                    <button class="action-btn start-btn" id="startTimer">
+                        <i class="fas fa-play"></i>
+                        Start Meditation
+                    </button>
+                    <button class="action-btn reset-btn" id="resetTimer">
+                        <i class="fas fa-redo"></i>
+                        Reset Timer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambient Sounds -->
+    <section class="ambient-sounds" id="sounds">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ambient Sounds</h2>
+                <p>Select calming sounds to enhance your meditation experience. Mix and match to create your perfect atmosphere.</p>
+            </div>
+            <div class="sound-grid" id="soundGrid">
+                <!-- Sounds will be added by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation" id="donate">
+        <div class="container">
+            <div class="section-title">
+                <h2>Support Our Mission</h2>
+                <p>Help us continue providing free meditation resources to people worldwide. Your support allows us to create more content and improve the platform.</p>
+            </div>
+            <div class="donation-box fade-in">
+                <h3>Make a Contribution</h3>
+                <p>Select an amount or enter a custom donation. Every contribution makes a difference.</p>
+                
+                <div class="donation-options">
+                    <div class="donation-option" data-amount="5">$5</div>
+                    <div class="donation-option" data-amount="10">$10</div>
+                    <div class="donation-option active" data-amount="20">$20</div>
+                    <div class="donation-option" data-amount="50">$50</div>
+                    <div class="donation-option" data-amount="100">$100</div>
+                </div>
+                
+                <div class="custom-amount">
+                    <input type="number" id="customAmount" placeholder="Custom amount ($)" min="1" step="1">
+                </div>
+                
+                <button class="cta-button" id="donateButton">
+                    <i class="fas fa-heart"></i>
+                    Donate Now
+                </button>
+                
+                <div class="account-details">
+                    <h4>Bank Transfer Details</h4>
+                    <p><strong>Account Name:</strong> Morakkaba Meditation Foundation</p>
+                    <p><strong>Account Number:</strong> XXXX-XXXX-XXXX-7890</p>
+                    <p><strong>Bank Name:</strong> Global Peace Bank</p>
+                    <p><strong>SWIFT Code:</strong> GPBXUSXX</p>
+                    <p><strong>Reference:</strong> MEDITATION-DONATION</p>
+                </div>
+                
+                <div class="security-note">
+                    <p><i class="fas fa-shield-alt"></i> <strong>Security Note:</strong> For actual donations, we recommend using secure payment gateways like PayPal, Stripe, or Patreon instead of publicly displaying bank details. Consider implementing a proper payment processor for security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-spa"></i>
+                        <span>Morakkaba</span>
+                    </div>
+                    <p>Helping millions find peace, focus, and balance through guided meditation and mindfulness practices since 2023.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#meditate">Meditation Timer</a></li>
+                        <li><a href="#sounds">Ambient Sounds</a></li>
+                        <li><a href="#donate">Support Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Guided Meditations</a></li>
+                        <li><a href="#">Sleep Stories</a></li>
+                        <li><a href="#">Mindfulness Exercises</a></li>
+                        <li><a href="#">Breathing Techniques</a></li>
+                        <li><a href="#">For Beginners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> contact@morakkaba.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Morakkaba Meditation Platform. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Elements -->
+    <audio id="rainSound" loop>
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-rain-loop-1244.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="forestSound" loop>
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-forest-birds-1295.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wavesSound" loop>
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-waves-on-the-beach-1256.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="windSound" loop>
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-wind-in-the-trees-1323.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bellSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-bell-notification-933.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // DOM Elements
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const startMeditationBtn = document.getElementById('startMeditationBtn');
+        const heroStartBtn = document.getElementById('heroStartBtn');
+        const learnMoreBtn = document.getElementById('learnMoreBtn');
+        const timeDisplay = document.getElementById('timeDisplay');
+        const timerButtons = document.querySelectorAll('.timer-btn');
+        const startTimerBtn = document.getElementById('startTimer');
+        const resetTimerBtn = document.getElementById('resetTimer');
+        const soundGrid = document.getElementById('soundGrid');
+        const donationOptions = document.querySelectorAll('.donation-option');
+        const customAmountInput = document.getElementById('customAmount');
+        const donateButton = document.getElementById('donateButton');
+        const bellSound = document.getElementById('bellSound');
+        
+        // Timer Variables
+        let timerInterval;
+        let timeLeft = 600; // 10 minutes in seconds
+        let isRunning = false;
+        let selectedTime = 600;
+        
+        // Sound Data
+        const sounds = [
+            { id: 'rainSound', name: 'Gentle Rain', icon: 'fas fa-cloud-rain', desc: 'Soft rainfall for relaxation', audio: document.getElementById('rainSound'), volume: 0.5 },
+            { id: 'forestSound', name: 'Forest Birds', icon: 'fas fa-feather-alt', desc: 'Calming forest ambiance', audio: document.getElementById('forestSound'), volume: 0.5 },
+            { id: 'wavesSound', name: 'Ocean Waves', icon: 'fas fa-water', desc: 'Soothing ocean waves', audio: document.getElementById('wavesSound'), volume: 0.5 },
+            { id: 'windSound', name: 'Wind Chimes', icon: 'fas fa-wind', desc: 'Gentle wind and chimes', audio: document.getElementById('windSound'), volume: 0.5 }
+        ];
+        
+        // Active sounds
+        let activeSounds = [];
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTimeDisplay();
+            createSoundCards();
+            setupEventListeners();
+            
+            // Add fade-in animation to sections on scroll
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+        
+        // Set up event listeners
+        function setupEventListeners() {
+            // Mobile menu toggle
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.innerHTML = navLinks.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // Start meditation buttons
+            startMeditationBtn.addEventListener('click', startMeditation);
+            heroStartBtn.addEventListener('click', startMeditation);
+            
+            // Learn more button
+            learnMoreBtn.addEventListener('click', () => {
+                document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Timer buttons
+            timerButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    timerButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    // Set selected time
+                    selectedTime = parseInt(button.getAttribute('data-time'));
+                    timeLeft = selectedTime;
+                    updateTimeDisplay();
+                });
+            });
+            
+            // Start timer button
+            startTimerBtn.addEventListener('click', toggleTimer);
+            
+            // Reset timer button
+            resetTimerBtn.addEventListener('click', resetTimer);
+            
+            // Donation options
+            donationOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    donationOptions.forEach(opt => opt.classList.remove('active'));
+                    option.classList.add('active');
+                    customAmountInput.value = '';
+                });
+            });
+            
+            // Custom amount input
+            customAmountInput.addEventListener('input', () => {
+                donationOptions.forEach(opt => opt.classList.remove('active'));
+            });
+            
+            // Donate button
+            donateButton.addEventListener('click', processDonation);
+        }
+        
+        // Create sound cards
+        function createSoundCards() {
+            sounds.forEach(sound => {
+                const card = document.createElement('div');
+                card.className = 'sound-card';
+                card.id = `card-${sound.id}`;
+                
+                card.innerHTML = `
+                    <div class="sound-icon">
+                        <i class="${sound.icon}"></i>
+                    </div>
+                    <h3>${sound.name}</h3>
+                    <p>${sound.desc}</p>
+                    <div class="volume-control">
+                        <i class="fas fa-volume-down"></i>
+                        <input type="range" min="0" max="100" value="50" class="volume-slider" data-sound="${sound.id}">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                `;
+                
+                soundGrid.appendChild(card);
+                
+                // Add click event to toggle sound
+                card.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('volume-slider')) {
+                        toggleSound(sound);
+                    }
+                });
+                
+                // Add volume change event
+                const volumeSlider = card.querySelector('.volume-slider');
+                volumeSlider.addEventListener('input', (e) => {
+                    const volume = e.target.value / 100;
+                    sound.audio.volume = volume;
+                    sound.volume = volume;
+                });
+            });
+        }
+        
+        // Toggle sound on/off
+        function toggleSound(sound) {
+            const card = document.getElementById(`card-${sound.id}`);
+            
+            if (activeSounds.includes(sound.id)) {
+                // Stop the sound
+                sound.audio.pause();
+                sound.audio.currentTime = 0;
+                activeSounds = activeSounds.filter(id => id !== sound.id);
+                card.classList.remove('active');
+            } else {
+                // Play the sound
+                sound.audio.volume = sound.volume;
+                sound.audio.play();
+                activeSounds.push(sound.id);
+                card.classList.add('active');
+            }
+        }
+        
+        // Start meditation function
+        function startMeditation() {
+            // Scroll to meditation timer
+            document.querySelector('#meditate').scrollIntoView({ behavior: 'smooth' });
+            
+            // Start the timer with 10 minutes
+            timerButtons.forEach(btn => btn.classList.remove('active'));
+            timerButtons[1].classList.add('active'); // Select 10 min
+            selectedTime = 600;
+            timeLeft = selectedTime;
+            updateTimeDisplay();
+            
+            // Show notification
+            showNotification('Meditation session started. Find a comfortable position and focus on your breath.');
+        }
+        
+        // Toggle timer
+        function toggleTimer() {
+            if (isRunning) {
+                // Pause the timer
+                clearInterval(timerInterval);
+                isRunning = false;
+                startTimerBtn.innerHTML = '<i class="fas fa-play"></i> Resume Meditation';
+                startTimerBtn.classList.remove('pulse');
+            } else {
+                // Start the timer
+                isRunning = true;
+                startTimerBtn.innerHTML = '<i class="fas fa-pause"></i> Pause Meditation';
+                startTimerBtn.classList.add('pulse');
+                
+                timerInterval = setInterval(() => {
+                    timeLeft--;
+                    updateTimeDisplay();
+                    
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval);
+                        isRunning = false;
+                        startTimerBtn.innerHTML = '<i class="fas fa-play"></i> Start Meditation';
+                        startTimerBtn.classList.remove('pulse');
+                        
+                        // Play bell sound
+                        bellSound.play();
+                        
+                        // Show notification
+                        showNotification('Meditation session complete. Take a moment to notice how you feel.');
+                        
+                        // Stop all sounds
+                        activeSounds.forEach(soundId => {
+                            const sound = sounds.find(s => s.id === soundId);
+                            if (sound) {
+                                sound.audio.pause();
+                                sound.audio.currentTime = 0;
+                            }
+                        });
+                        
+                        activeSounds = [];
+                        document.querySelectorAll('.sound-card').forEach(card => {
+                            card.classList.remove('active');
+                        });
+                    }
+                }, 1000);
+            }
+        }
+        
+        // Reset timer
+        function resetTimer() {
+            clearInterval(timerInterval);
+            isRunning = false;
+            timeLeft = selectedTime;
+            updateTimeDisplay();
+            startTimerBtn.innerHTML = '<i class="fas fa-play"></i> Start Meditation';
+            startTimerBtn.classList.remove('pulse');
+        }
+        
+        // Update time display
+        function updateTimeDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timeDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+        
+        // Process donation
+        function processDonation() {
+            let amount = 0;
+            
+            // Check if a preset option is selected
+            const activeOption = document.querySelector('.donation-option.active');
+            if (activeOption) {
+                amount = parseInt(activeOption.getAttribute('data-amount'));
+            }
+            
+            // Check if custom amount is entered
+            if (customAmountInput.value) {
+                amount = parseInt(customAmountInput.value);
+            }
+            
+            if (amount > 0) {
+                // In a real application, this would process payment via a secure gateway
+                showNotification(`Thank you for your donation of $${amount}! Your support helps us continue our mission.`);
+                
+                // Reset donation form
+                donationOptions.forEach(opt => opt.classList.remove('active'));
+                donationOptions[2].classList.add('active'); // Reset to $20
+                customAmountInput.value = '';
+            } else {
+                showNotification('Please select or enter a donation amount.', true);
+            }
+        }
+        
+        // Show notification
+        function showNotification(message, isError = false) {
+            // Remove existing notification
+            const existingNotification = document.querySelector('.notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+            
+            // Create notification
+            const notification = document.createElement('div');
+            notification.className = `notification ${isError ? 'error' : 'success'}`;
+            notification.innerHTML = `
+                <div style="
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    background: ${isError ? 'var(--accent)' : 'var(--primary)'};
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 10px;
+                    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+                    z-index: 9999;
+                    max-width: 350px;
+                    animation: slideIn 0.3s ease-out;
+                ">
+                    <i class="fas ${isError ? 'fa-exclamation-circle' : 'fa-check-circle'}"></i>
+                    ${message}
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove notification after 5 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-out';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 5000);
+            
+            // Add CSS for animation
+            if (!document.querySelector('#notification-styles')) {
+                const style = document.createElement('style');
+                style.id = 'notification-styles';
+                style.textContent = `
+                    @keyframes slideIn {
+                        from { transform: translateX(100%); opacity: 0; }
+                        to { transform: translateX(0); opacity: 1; }
+                    }
+                    @keyframes slideOut {
+                        from { transform: translateX(0); opacity: 1; }
+                        to { transform: translateX(100%); opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        }
+        
+        // Initialize with some ambient sounds
+        setTimeout(() => {
+            toggleSound(sounds[0]); // Rain sound
+            toggleSound(sounds[1]); // Forest sound
+        }, 1000);
+    </script>
+</body>
+</html>
