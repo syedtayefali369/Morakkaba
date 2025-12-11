@@ -3,230 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morakkaba | Immersive Meditation</title>
+    <title>Morakkaba | Dark Neon Meditation</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
-  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <!-- Header -->
     <header>
         <div class="container">
             <nav>
                 <div class="logo">
                     <i class="fas fa-spa"></i>
-                    <span>Morakkaba</span>
+                    <span>MORAKKABA</span>
                 </div>
                 <div class="menu-toggle" id="menuToggle">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#meditate">Meditate</a></li>
-                    <li><a href="#sounds">Ambience</a></li>
+                    <li><a href="#features">Features</a></li>
                     <li><a href="#donate">Support</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
-                <button class="cta-button" id="startMeditationBtn">
-                    <i class="fas fa-play-circle"></i>
-                    Start Session
-                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero with Timer -->
     <section class="hero" id="home">
         <div class="container">
-            <div class="fade-in">
-                <h1>Find Your Inner Peace with Morakkaba</h1>
-                <p>Immerse yourself in guided meditations, ambient sounds, and mindfulness practices designed to reduce stress, improve focus, and enhance overall wellbeing.</p>
-                <div class="hero-buttons">
-                    <button class="cta-button pulse" id="heroStartBtn">
-                        <i class="fas fa-play"></i>
-                        Begin Meditation
-                    </button>
-                    <button class="secondary-button" id="learnMoreBtn">
-                        <i class="fas fa-info-circle"></i>
-                        Learn More
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Meditation Timer -->
-    <section class="meditation-timer" id="meditate">
-        <div class="container">
-            <div class="section-title">
-                <h2>Meditation Timer</h2>
-                <p>Set your meditation duration and immerse yourself in mindfulness. Choose from preset times or set your own custom duration.</p>
-            </div>
-            <div class="timer-container fade-in">
+            <h1 class="float">DEEP MEDITATION ZONE</h1>
+            <p>Enter a state of deep mindfulness with our advanced neon-themed meditation timer. Focus, breathe, and transform.</p>
+            
+            <!-- Main Timer on First Page -->
+            <div class="main-timer">
+                <h2 style="text-align: center; margin-bottom: 20px; color: var(--neon-blue);">MEDITATION TIMER</h2>
                 <div class="time-display" id="timeDisplay">10:00</div>
+                
                 <div class="timer-controls">
-                    <button class="timer-btn active" data-time="300">5 Min</button>
-                    <button class="timer-btn" data-time="600">10 Min</button>
-                    <button class="timer-btn" data-time="900">15 Min</button>
-                    <button class="timer-btn" data-time="1800">30 Min</button>
-                    <button class="timer-btn" data-time="2700">45 Min</button>
+                    <button class="timer-btn active" data-time="300">5 MIN</button>
+                    <button class="timer-btn" data-time="600">10 MIN</button>
+                    <button class="timer-btn" data-time="900">15 MIN</button>
+                    <button class="timer-btn" data-time="1800">30 MIN</button>
+                    <button class="timer-btn" data-time="2700">45 MIN</button>
                 </div>
+                
                 <div class="timer-actions">
-                    <button class="action-btn start-btn" id="startTimer">
-                        <i class="fas fa-play"></i>
-                        Start Meditation
+                    <button class="action-btn start-btn pulse" id="startTimer">
+                        <i class="fas fa-play-circle"></i>
+                        START MEDITATION
                     </button>
                     <button class="action-btn reset-btn" id="resetTimer">
                         <i class="fas fa-redo"></i>
-                        Reset Timer
+                        RESET TIMER
                     </button>
                 </div>
             </div>
+            
+            <p style="color: #666; margin-top: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <i class="fas fa-info-circle" style="color: var(--neon-blue);"></i>
+                Find a quiet space, sit comfortably, and press start. The timer will guide you with gentle notifications.
+            </p>
         </div>
     </section>
 
-    <!-- Ambient Sounds -->
-    <section class="ambient-sounds" id="sounds">
+    <!-- Features -->
+    <section class="features" id="features">
         <div class="container">
             <div class="section-title">
-                <h2>Ambient Sounds</h2>
-                <p>Select calming sounds to enhance your meditation experience. Mix and match to create your perfect atmosphere.</p>
+                <h2>PREMIUM FEATURES</h2>
+                <p>Experience meditation like never before with our advanced features</p>
             </div>
-            <div class="sound-grid" id="soundGrid">
-                <!-- Sounds will be added by JavaScript -->
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>FOCUS MODE</h3>
+                    <p>Eliminate distractions with our exclusive focus-enhancing audio frequencies</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3>BRAINWAVE SYNC</h3>
+                    <p>Binaural beats scientifically tuned to induce theta and alpha brainwaves</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>PROGRESS TRACKING</h3>
+                    <p>Monitor your meditation journey with detailed analytics and insights</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Donation Section -->
+    <!-- Donation Section (Last Page) -->
     <section class="donation" id="donate">
         <div class="container">
-            <div class="section-title">
-                <h2>Support Our Mission</h2>
-                <p>Help us continue providing free meditation resources to people worldwide. Your support allows us to create more content and improve the platform.</p>
-            </div>
-            <div class="donation-box fade-in">
-                <h3>Make a Contribution</h3>
-                <p>Select an amount or enter a custom donation. Every contribution makes a difference.</p>
+            <div class="donation-box">
+                <h2>SUPPORT OUR MISSION</h2>
+                <p>Your contribution helps us maintain and improve Morakkaba, providing free meditation resources to thousands worldwide. Every donation makes a difference.</p>
                 
                 <div class="donation-options">
-                    <div class="donation-option" data-amount="5">$5</div>
-                    <div class="donation-option" data-amount="10">$10</div>
-                    <div class="donation-option active" data-amount="20">$20</div>
-                    <div class="donation-option" data-amount="50">$50</div>
-                    <div class="donation-option" data-amount="100">$100</div>
+                    <div class="donation-option" data-amount="5">
+                        <h3>$5</h3>
+                        <p>One coffee</p>
+                    </div>
+                    <div class="donation-option active" data-amount="10">
+                        <h3>$10</h3>
+                        <p>Monthly supporter</p>
+                    </div>
+                    <div class="donation-option" data-amount="25">
+                        <h3>$25</h3>
+                        <p>Serious contributor</p>
+                    </div>
+                    <div class="donation-option" data-amount="50">
+                        <h3>$50</h3>
+                        <p>Generous benefactor</p>
+                    </div>
+                    <div class="donation-option" data-amount="100">
+                        <h3>$100</h3>
+                        <p>Premium supporter</p>
+                    </div>
+                    <div class="donation-option" data-amount="custom">
+                        <h3>CUSTOM</h3>
+                        <p>Any amount</p>
+                    </div>
                 </div>
                 
-                <div class="custom-amount">
-                    <input type="number" id="customAmount" placeholder="Custom amount ($)" min="1" step="1">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <input type="number" id="customAmount" placeholder="Enter custom amount ($)" min="1" style="
+                        background: rgba(0,0,0,0.5);
+                        border: 2px solid rgba(0,255,157,0.3);
+                        border-radius: 10px;
+                        padding: 15px;
+                        color: white;
+                        font-size: 1.1rem;
+                        width: 250px;
+                        text-align: center;
+                        display: none;
+                    ">
                 </div>
                 
-                <button class="cta-button" id="donateButton">
+                <button class="donate-button pulse" id="donateButton">
                     <i class="fas fa-heart"></i>
-                    Donate Now
-                </button>
-                
-                <div class="account-details">
-                    <h4>Bank Transfer Details</h4>
-                    <p><strong>Account Name:</strong> Morakkaba Meditation Foundation</p>
-                    <p><strong>Account Number:</strong> XXXX-XXXX-XXXX-7890</p>
-                    <p><strong>Bank Name:</strong> Global Peace Bank</p>
-                    <p><strong>SWIFT Code:</strong> GPBXUSXX</p>
-                    <p><strong>Reference:</strong> MEDITATION-DONATION</p>
-                </div>
-                
-                <div class="security-note">
-                    <p><i class="fas fa-shield-alt"></i> <strong>Security Note:</strong> For actual donations, we recommend using secure payment gateways like PayPal, Stripe, or Patreon instead of publicly displaying bank details. Consider implementing a proper payment processor for security.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                    DONATE NOW
+                </button>                
 
     <!-- Footer -->
     <footer id="about">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <div class="logo">
+                    <div class="logo" style="font-size: 24px;">
                         <i class="fas fa-spa"></i>
-                        <span>Morakkaba</span>
+                        <span>MORAKKABA</span>
                     </div>
-                    <p>Helping millions find peace, focus, and balance through guided meditation and mindfulness practices since 2023.</p>
+                    <p style="color: #aaa; margin-top: 15px;">Advanced meditation technology for the modern mind.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
                     </div>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3>QUICK LINKS</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#meditate">Meditation Timer</a></li>
-                        <li><a href="#sounds">Ambient Sounds</a></li>
+                        <li><a href="#home">Meditation Timer</a></li>
+                        <li><a href="#features">Features</a></li>
                         <li><a href="#donate">Support Us</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="#ads">Advertise</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Resources</h3>
+                    <h3>RESOURCES</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Guided Meditations</a></li>
-                        <li><a href="#">Sleep Stories</a></li>
-                        <li><a href="#">Mindfulness Exercises</a></li>
-                        <li><a href="#">Breathing Techniques</a></li>
-                        <li><a href="#">For Beginners</a></li>
+                        <li><a href="#">Meditation Guide</a></li>
+                        <li><a href="#">Sleep Sounds</a></li>
+                        <li><a href="#">Breathing Exercises</a></li>
+                        <li><a href="#">Focus Music</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Contact</h3>
+                    <h3>CONTACT</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> contact@morakkaba.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                        <li><a href="mailto:support@morakkaba.com">support@morakkaba.com</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
                     </ul>
                 </div>
             </div>
+            
             <div class="copyright">
-                <p>&copy; 2023 Morakkaba Meditation Platform. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p>&copy; 2023 MORAKKABA MEDITATION. All rights reserved. | Dark Neon Theme v2.0</p>
             </div>
         </div>
     </footer>
 
     <!-- Audio Elements -->
-    <audio id="rainSound" loop>
-        <source src="https://assets.mixkit.co/sfx/preview/mixkit-rain-loop-1244.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="forestSound" loop>
-        <source src="https://assets.mixkit.co/sfx/preview/mixkit-forest-birds-1295.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="wavesSound" loop>
-        <source src="https://assets.mixkit.co/sfx/preview/mixkit-waves-on-the-beach-1256.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="windSound" loop>
-        <source src="https://assets.mixkit.co/sfx/preview/mixkit-wind-in-the-trees-1323.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="bellSound">
-        <source src="https://assets.mixkit.co/sfx/preview/mixkit-bell-notification-933.mp3" type="audio/mpeg">
-    </audio>
+    <audio id="startSound" src="https://assets.mixkit.co/sfx/preview/mixkit-bell-notification-933.mp3"></audio>
+    <audio id="endSound" src="https://assets.mixkit.co/sfx/preview/mixkit-magic-sparkles-300.mp3"></audio>
 
     <script>
         // DOM Elements
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
-        const startMeditationBtn = document.getElementById('startMeditationBtn');
-        const heroStartBtn = document.getElementById('heroStartBtn');
-        const learnMoreBtn = document.getElementById('learnMoreBtn');
         const timeDisplay = document.getElementById('timeDisplay');
         const timerButtons = document.querySelectorAll('.timer-btn');
         const startTimerBtn = document.getElementById('startTimer');
         const resetTimerBtn = document.getElementById('resetTimer');
-        const soundGrid = document.getElementById('soundGrid');
         const donationOptions = document.querySelectorAll('.donation-option');
         const customAmountInput = document.getElementById('customAmount');
         const donateButton = document.getElementById('donateButton');
-        const bellSound = document.getElementById('bellSound');
+        const startSound = document.getElementById('startSound');
+        const endSound = document.getElementById('endSound');
         
         // Timer Variables
         let timerInterval;
@@ -234,44 +237,20 @@
         let isRunning = false;
         let selectedTime = 600;
         
-        // Sound Data
-        const sounds = [
-            { id: 'rainSound', name: 'Gentle Rain', icon: 'fas fa-cloud-rain', desc: 'Soft rainfall for relaxation', audio: document.getElementById('rainSound'), volume: 0.5 },
-            { id: 'forestSound', name: 'Forest Birds', icon: 'fas fa-feather-alt', desc: 'Calming forest ambiance', audio: document.getElementById('forestSound'), volume: 0.5 },
-            { id: 'wavesSound', name: 'Ocean Waves', icon: 'fas fa-water', desc: 'Soothing ocean waves', audio: document.getElementById('wavesSound'), volume: 0.5 },
-            { id: 'windSound', name: 'Wind Chimes', icon: 'fas fa-wind', desc: 'Gentle wind and chimes', audio: document.getElementById('windSound'), volume: 0.5 }
-        ];
-        
-        // Active sounds
-        let activeSounds = [];
-        
         // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             updateTimeDisplay();
-            createSoundCards();
             setupEventListeners();
+            setupSmoothScroll();
             
-            // Add fade-in animation to sections on scroll
-            const sections = document.querySelectorAll('section');
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                    }
-                });
-            }, observerOptions);
-            
-            sections.forEach(section => {
-                observer.observe(section);
+            // Add floating animation to feature cards
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
             });
         });
         
-        // Set up event listeners
+        // Setup Event Listeners
         function setupEventListeners() {
             // Mobile menu toggle
             menuToggle.addEventListener('click', () => {
@@ -281,41 +260,21 @@
                     : '<i class="fas fa-bars"></i>';
             });
             
-            // Close mobile menu when clicking a link
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                });
-            });
-            
-            // Start meditation buttons
-            startMeditationBtn.addEventListener('click', startMeditation);
-            heroStartBtn.addEventListener('click', startMeditation);
-            
-            // Learn more button
-            learnMoreBtn.addEventListener('click', () => {
-                document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
-            });
-            
             // Timer buttons
             timerButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    // Remove active class from all buttons
                     timerButtons.forEach(btn => btn.classList.remove('active'));
-                    // Add active class to clicked button
                     button.classList.add('active');
-                    // Set selected time
                     selectedTime = parseInt(button.getAttribute('data-time'));
                     timeLeft = selectedTime;
                     updateTimeDisplay();
                 });
             });
             
-            // Start timer button
+            // Start/Stop timer
             startTimerBtn.addEventListener('click', toggleTimer);
             
-            // Reset timer button
+            // Reset timer
             resetTimerBtn.addEventListener('click', resetTimer);
             
             // Donation options
@@ -323,7 +282,14 @@
                 option.addEventListener('click', () => {
                     donationOptions.forEach(opt => opt.classList.remove('active'));
                     option.classList.add('active');
-                    customAmountInput.value = '';
+                    
+                    if (option.getAttribute('data-amount') === 'custom') {
+                        customAmountInput.style.display = 'block';
+                        customAmountInput.focus();
+                    } else {
+                        customAmountInput.style.display = 'none';
+                        customAmountInput.value = '';
+                    }
                 });
             });
             
@@ -336,199 +302,184 @@
             donateButton.addEventListener('click', processDonation);
         }
         
-        // Create sound cards
-        function createSoundCards() {
-            sounds.forEach(sound => {
-                const card = document.createElement('div');
-                card.className = 'sound-card';
-                card.id = `card-${sound.id}`;
-                
-                card.innerHTML = `
-                    <div class="sound-icon">
-                        <i class="${sound.icon}"></i>
-                    </div>
-                    <h3>${sound.name}</h3>
-                    <p>${sound.desc}</p>
-                    <div class="volume-control">
-                        <i class="fas fa-volume-down"></i>
-                        <input type="range" min="0" max="100" value="50" class="volume-slider" data-sound="${sound.id}">
-                        <i class="fas fa-volume-up"></i>
-                    </div>
-                `;
-                
-                soundGrid.appendChild(card);
-                
-                // Add click event to toggle sound
-                card.addEventListener('click', (e) => {
-                    if (!e.target.classList.contains('volume-slider')) {
-                        toggleSound(sound);
+        // Smooth scrolling for anchor links
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        navLinks.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
                     }
-                });
-                
-                // Add volume change event
-                const volumeSlider = card.querySelector('.volume-slider');
-                volumeSlider.addEventListener('input', (e) => {
-                    const volume = e.target.value / 100;
-                    sound.audio.volume = volume;
-                    sound.volume = volume;
                 });
             });
         }
         
-        // Toggle sound on/off
-        function toggleSound(sound) {
-            const card = document.getElementById(`card-${sound.id}`);
-            
-            if (activeSounds.includes(sound.id)) {
-                // Stop the sound
-                sound.audio.pause();
-                sound.audio.currentTime = 0;
-                activeSounds = activeSounds.filter(id => id !== sound.id);
-                card.classList.remove('active');
-            } else {
-                // Play the sound
-                sound.audio.volume = sound.volume;
-                sound.audio.play();
-                activeSounds.push(sound.id);
-                card.classList.add('active');
-            }
-        }
-        
-        // Start meditation function
-        function startMeditation() {
-            // Scroll to meditation timer
-            document.querySelector('#meditate').scrollIntoView({ behavior: 'smooth' });
-            
-            // Start the timer with 10 minutes
-            timerButtons.forEach(btn => btn.classList.remove('active'));
-            timerButtons[1].classList.add('active'); // Select 10 min
-            selectedTime = 600;
-            timeLeft = selectedTime;
-            updateTimeDisplay();
-            
-            // Show notification
-            showNotification('Meditation session started. Find a comfortable position and focus on your breath.');
-        }
-        
-        // Toggle timer
+        // Timer Functions
         function toggleTimer() {
             if (isRunning) {
-                // Pause the timer
-                clearInterval(timerInterval);
-                isRunning = false;
-                startTimerBtn.innerHTML = '<i class="fas fa-play"></i> Resume Meditation';
-                startTimerBtn.classList.remove('pulse');
+                pauseTimer();
             } else {
-                // Start the timer
-                isRunning = true;
-                startTimerBtn.innerHTML = '<i class="fas fa-pause"></i> Pause Meditation';
-                startTimerBtn.classList.add('pulse');
-                
-                timerInterval = setInterval(() => {
-                    timeLeft--;
-                    updateTimeDisplay();
-                    
-                    if (timeLeft <= 0) {
-                        clearInterval(timerInterval);
-                        isRunning = false;
-                        startTimerBtn.innerHTML = '<i class="fas fa-play"></i> Start Meditation';
-                        startTimerBtn.classList.remove('pulse');
-                        
-                        // Play bell sound
-                        bellSound.play();
-                        
-                        // Show notification
-                        showNotification('Meditation session complete. Take a moment to notice how you feel.');
-                        
-                        // Stop all sounds
-                        activeSounds.forEach(soundId => {
-                            const sound = sounds.find(s => s.id === soundId);
-                            if (sound) {
-                                sound.audio.pause();
-                                sound.audio.currentTime = 0;
-                            }
-                        });
-                        
-                        activeSounds = [];
-                        document.querySelectorAll('.sound-card').forEach(card => {
-                            card.classList.remove('active');
-                        });
-                    }
-                }, 1000);
+                startTimer();
             }
         }
         
-        // Reset timer
+        function startTimer() {
+            if (timeLeft <= 0) return;
+            
+            isRunning = true;
+            startTimerBtn.innerHTML = '<i class="fas fa-pause-circle"></i> PAUSE MEDITATION';
+            startTimerBtn.classList.add('pulse');
+            
+            // Play start sound
+            startSound.play();
+            
+            // Show notification
+            showNotification('Meditation session started. Find your focus.', false);
+            
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimeDisplay();
+                
+                if (timeLeft <= 0) {
+                    completeTimer();
+                }
+            }, 1000);
+        }
+        
+        function pauseTimer() {
+            isRunning = false;
+            clearInterval(timerInterval);
+            startTimerBtn.innerHTML = '<i class="fas fa-play-circle"></i> RESUME MEDITATION';
+            startTimerBtn.classList.remove('pulse');
+            
+            showNotification('Meditation paused.', false);
+        }
+        
         function resetTimer() {
             clearInterval(timerInterval);
             isRunning = false;
             timeLeft = selectedTime;
             updateTimeDisplay();
-            startTimerBtn.innerHTML = '<i class="fas fa-play"></i> Start Meditation';
+            startTimerBtn.innerHTML = '<i class="fas fa-play-circle"></i> START MEDITATION';
             startTimerBtn.classList.remove('pulse');
+            
+            showNotification('Timer reset to ' + formatTime(selectedTime), false);
         }
         
-        // Update time display
+        function completeTimer() {
+            clearInterval(timerInterval);
+            isRunning = false;
+            timeLeft = 0;
+            updateTimeDisplay();
+            startTimerBtn.innerHTML = '<i class="fas fa-play-circle"></i> START MEDITATION';
+            startTimerBtn.classList.remove('pulse');
+            
+            // Play completion sound
+            endSound.play();
+            
+            // Show completion notification
+            showNotification('Meditation complete! Take a moment to notice how you feel.', false);
+            
+            // Show celebration effect
+            showCelebration();
+        }
+        
         function updateTimeDisplay() {
             const minutes = Math.floor(timeLeft / 60);
             const seconds = timeLeft % 60;
             timeDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Add pulsing effect when under 1 minute
+            if (timeLeft < 60) {
+                timeDisplay.style.animation = 'pulse 1s infinite';
+                timeDisplay.style.color = 'var(--neon-blue)';
+            } else {
+                timeDisplay.style.animation = '';
+                timeDisplay.style.color = 'var(--neon-green)';
+            }
         }
         
-        // Process donation
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            return `${minutes} minute${minutes !== 1 ? 's' : ''}`;
+        }
+        
+        // Donation Processing
         function processDonation() {
             let amount = 0;
-            
-            // Check if a preset option is selected
-            const activeOption = document.querySelector('.donation-option.active');
-            if (activeOption) {
-                amount = parseInt(activeOption.getAttribute('data-amount'));
-            }
             
             // Check if custom amount is entered
             if (customAmountInput.value) {
                 amount = parseInt(customAmountInput.value);
+            } else {
+                // Check active donation option
+                const activeOption = document.querySelector('.donation-option.active');
+                if (activeOption && activeOption.getAttribute('data-amount') !== 'custom') {
+                    amount = parseInt(activeOption.getAttribute('data-amount'));
+                }
             }
             
             if (amount > 0) {
-                // In a real application, this would process payment via a secure gateway
-                showNotification(`Thank you for your donation of $${amount}! Your support helps us continue our mission.`);
+                // In a real implementation, this would redirect to payment gateway
+                // For now, show a demo message
+                showNotification(`Thank you for your $${amount} donation! Redirecting to secure payment...`, false);
                 
-                // Reset donation form
-                donationOptions.forEach(opt => opt.classList.remove('active'));
-                donationOptions[2].classList.add('active'); // Reset to $20
-                customAmountInput.value = '';
+                // Simulate payment processing
+                setTimeout(() => {
+                    showNotification('Payment processed successfully! Thank you for supporting Morakkaba.', false);
+                    showCelebration();
+                    
+                    // Reset donation form
+                    donationOptions.forEach(opt => opt.classList.remove('active'));
+                    donationOptions[1].classList.add('active'); // Reset to $10
+                    customAmountInput.style.display = 'none';
+                    customAmountInput.value = '';
+                }, 2000);
             } else {
                 showNotification('Please select or enter a donation amount.', true);
             }
         }
         
-        // Show notification
-        function showNotification(message, isError = false) {
+        // Notification System
+        function showNotification(message, isError) {
             // Remove existing notification
-            const existingNotification = document.querySelector('.notification');
+            const existingNotification = document.querySelector('.custom-notification');
             if (existingNotification) {
                 existingNotification.remove();
             }
             
             // Create notification
             const notification = document.createElement('div');
-            notification.className = `notification ${isError ? 'error' : 'success'}`;
+            notification.className = `custom-notification ${isError ? 'error' : 'success'}`;
             notification.innerHTML = `
                 <div style="
                     position: fixed;
                     top: 100px;
                     right: 20px;
-                    background: ${isError ? 'var(--accent)' : 'var(--primary)'};
-                    color: white;
+                    background: ${isError ? 'rgba(255, 50, 50, 0.9)' : 'rgba(0, 255, 157, 0.9)'};
+                    color: ${isError ? 'white' : 'black'};
                     padding: 15px 25px;
                     border-radius: 10px;
                     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
                     z-index: 9999;
                     max-width: 350px;
-                    animation: slideIn 0.3s ease-out;
+                    animation: slideInRight 0.3s ease-out;
+                    font-weight: 600;
+                    backdrop-filter: blur(10px);
+                    border: 1px solid ${isError ? 'rgba(255, 50, 50, 0.5)' : 'rgba(0, 255, 157, 0.5)'};
                 ">
-                    <i class="fas ${isError ? 'fa-exclamation-circle' : 'fa-check-circle'}"></i>
+                    <i class="fas ${isError ? 'fa-exclamation-triangle' : 'fa-check-circle'}" style="margin-right: 10px;"></i>
                     ${message}
                 </div>
             `;
@@ -537,7 +488,7 @@
             
             // Remove notification after 5 seconds
             setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease-out';
+                notification.style.animation = 'slideOutRight 0.3s ease-out';
                 setTimeout(() => {
                     if (notification.parentNode) {
                         notification.parentNode.removeChild(notification);
@@ -545,16 +496,16 @@
                 }, 300);
             }, 5000);
             
-            // Add CSS for animation
+            // Add CSS for animation if not already added
             if (!document.querySelector('#notification-styles')) {
                 const style = document.createElement('style');
                 style.id = 'notification-styles';
                 style.textContent = `
-                    @keyframes slideIn {
+                    @keyframes slideInRight {
                         from { transform: translateX(100%); opacity: 0; }
                         to { transform: translateX(0); opacity: 1; }
                     }
-                    @keyframes slideOut {
+                    @keyframes slideOutRight {
                         from { transform: translateX(0); opacity: 1; }
                         to { transform: translateX(100%); opacity: 0; }
                     }
@@ -563,11 +514,217 @@
             }
         }
         
-        // Initialize with some ambient sounds
+        // Celebration Effect
+        function showCelebration() {
+            const celebration = document.createElement('div');
+            celebration.style.position = 'fixed';
+            celebration.style.top = '0';
+            celebration.style.left = '0';
+            celebration.style.width = '100%';
+            celebration.style.height = '100%';
+            celebration.style.pointerEvents = 'none';
+            celebration.style.zIndex = '9998';
+            celebration.style.background = 'radial-gradient(circle at 50% 50%, transparent 30%, rgba(0,255,157,0.1) 70%)';
+            celebration.style.animation = 'pulse 1s ease-out';
+            
+            document.body.appendChild(celebration);
+            
+            setTimeout(() => {
+                if (celebration.parentNode) {
+                    celebration.parentNode.removeChild(celebration);
+                }
+            }, 1000);
+        }
+        
+        // ==================== PAYMENT INTEGRATION GUIDE ====================
+        
+        // This function would be replaced with actual Stripe/PayPal integration
+        function setupPaymentIntegration() {
+            // Stripe Integration Example (commented out - requires actual API keys)
+            /*
+            // Load Stripe.js
+            const stripeScript = document.createElement('script');
+            stripeScript.src = 'https://js.stripe.com/v3/';
+            document.head.appendChild(stripeScript);
+            
+            // Initialize Stripe with your publishable key
+            const stripe = Stripe('pk_live_your_publishable_key_here');
+            
+            // Create checkout session (backend required)
+            async function createCheckoutSession(amount) {
+                const response = await fetch('/create-checkout-session', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        amount: amount * 100, // Convert to cents
+                        currency: 'usd'
+                    }),
+                });
+                
+                const session = await response.json();
+                
+                // Redirect to Stripe Checkout
+                const result = await stripe.redirectToCheckout({
+                    sessionId: session.id,
+                });
+                
+                if (result.error) {
+                    showNotification(result.error.message, true);
+                }
+            }
+            */
+            
+            // PayPal Integration Example (commented out - requires actual Client ID)
+            /*
+            // Load PayPal SDK
+            const paypalScript = document.createElement('script');
+            paypalScript.src = 'https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD';
+            document.head.appendChild(paypalScript);
+            
+            paypalScript.onload = function() {
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                    value: donationAmount
+                                }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            showNotification('Payment completed successfully!', false);
+                        });
+                    }
+                }).render('#paypal-button-container');
+            };
+            */
+        }
+        
+        // ==================== AD INTEGRATION GUIDE ====================
+        
+        function setupAdIntegration() {
+            // Google AdSense Integration (commented out - requires approval)
+            /*
+            const adsenseScript = document.createElement('script');
+            adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID';
+            adsenseScript.async = true;
+            adsenseScript.crossOrigin = 'anonymous';
+            document.head.appendChild(adsenseScript);
+            
+            // Ad placements
+            const adPlaceholders = document.querySelectorAll('.ad-placeholder');
+            adPlaceholders.forEach((placeholder, index) => {
+                const adScript = document.createElement('script');
+                adScript.innerHTML = `
+                    (adsbygoogle = window.adsbygoogle || []).push({
+                        google_ad_client: "ca-pub-YOUR_PUBLISHER_ID",
+                        enable_page_level_ads: true,
+                        overlays: {bottom: true}
+                    });
+                `;
+                placeholder.appendChild(adScript);
+            });
+            */
+            
+            // For now, show demo ads
+            showDemoAds();
+        }
+        
+        function showDemoAds() {
+            const adPlaceholders = document.querySelectorAll('.ad-placeholder');
+            const demoAds = [
+                'Meditation Cushion Sale - 50% Off',
+                'Try Calm Premium - Free Trial',
+                'Noise Cancelling Headphones - Best for Meditation',
+                'Meditation Retreat in Bali - Limited Spots'
+            ];
+            
+            adPlaceholders.forEach((placeholder, index) => {
+                placeholder.innerHTML = `
+                    <div style="
+                        background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,217,255,0.1));
+                        padding: 20px;
+                        border-radius: 10px;
+                        border: 1px solid rgba(0,255,157,0.3);
+                        color: var(--neon-green);
+                        font-weight: 600;
+                        text-align: center;
+                    ">
+                        <i class="fas fa-ad" style="margin-right: 10px;"></i>
+                        ${demoAds[index % demoAds.length]}
+                        <br>
+                        <span style="font-size: 0.8rem; color: #aaa; font-weight: normal;">[Advertisement]</span>
+                    </div>
+                `;
+                
+                // Make ads clickable (in real implementation, this would link to advertiser)
+                placeholder.style.cursor = 'pointer';
+                placeholder.addEventListener('click', () => {
+                    showNotification('Advertisement clicked - this would redirect to advertiser in production', false);
+                });
+            });
+        }
+        
+        // Initialize ad integration
         setTimeout(() => {
-            toggleSound(sounds[0]); // Rain sound
-            toggleSound(sounds[1]); // Forest sound
-        }, 1000);
+            setupAdIntegration();
+        }, 2000);
+        
+        // Track page views for ad optimization
+        let pageViews = localStorage.getItem('morakkaba_pageviews') || 0;
+        pageViews++;
+        localStorage.setItem('morakkaba_pageviews', pageViews);
+        
+        // Show premium ad after 3 pageviews
+        if (pageViews > 3) {
+            setTimeout(() => {
+                const premiumAd = document.createElement('div');
+                premiumAd.innerHTML = `
+                    <div style="
+                        position: fixed;
+                        bottom: 20px;
+                        right: 20px;
+                        background: linear-gradient(135deg, #000, var(--dark-bg));
+                        border: 2px solid var(--neon-green);
+                        padding: 15px;
+                        border-radius: 10px;
+                        max-width: 300px;
+                        z-index: 9997;
+                        box-shadow: var(--neon-glow);
+                        animation: slideInRight 0.5s ease-out;
+                    ">
+                        <h4 style="color: var(--neon-green); margin-bottom: 10px;">Upgrade to Premium</h4>
+                        <p style="color: #aaa; font-size: 0.9rem;">Unlock advanced features for $9.99/month</p>
+                        <button style="
+                            background: var(--gradient);
+                            color: black;
+                            border: none;
+                            padding: 8px 15px;
+                            border-radius: 20px;
+                            font-weight: bold;
+                            cursor: pointer;
+                            margin-top: 10px;
+                            width: 100%;
+                        ">Learn More</button>
+                        <button onclick="this.parentElement.style.display='none'" style="
+                            position: absolute;
+                            top: 5px;
+                            right: 10px;
+                            background: transparent;
+                            border: none;
+                            color: #666;
+                            cursor: pointer;
+                            font-size: 1.2rem;
+                        ">×</button>
+                    </div>
+                `;
+                document.body.appendChild(premiumAd);
+            }, 10000);
+        }
     </script>
 </body>
 </html>
